@@ -13,6 +13,7 @@
 #define FCY 64000000
 #include "libpic30.h"
 #include "user.h"
+#include "param.h"
 #include "common.h"
 #include "function.h"
 
@@ -22,9 +23,8 @@
 
 int main(int argc, char** argv) {
     setup();
-    
+
     while(1){
-        
     }
     
     return (EXIT_SUCCESS);
