@@ -12,7 +12,7 @@
 extern "C" {
 #endif
 
-
+extern const double angel_sin_table[];
 
 
 #ifdef	__cplusplus

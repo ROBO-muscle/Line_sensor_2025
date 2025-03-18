@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c setup.c interrupt.c function.c peripheral.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c setup.c interrupt.c function.c peripheral.c table.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/setup.o ${OBJECTDIR}/interrupt.o ${OBJECTDIR}/function.o ${OBJECTDIR}/peripheral.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/setup.o.d ${OBJECTDIR}/interrupt.o.d ${OBJECTDIR}/function.o.d ${OBJECTDIR}/peripheral.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.o ${OBJECTDIR}/setup.o ${OBJECTDIR}/interrupt.o ${OBJECTDIR}/function.o ${OBJECTDIR}/peripheral.o ${OBJECTDIR}/table.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.o.d ${OBJECTDIR}/setup.o.d ${OBJECTDIR}/interrupt.o.d ${OBJECTDIR}/function.o.d ${OBJECTDIR}/peripheral.o.d ${OBJECTDIR}/table.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/setup.o ${OBJECTDIR}/interrupt.o ${OBJECTDIR}/function.o ${OBJECTDIR}/peripheral.o
+OBJECTFILES=${OBJECTDIR}/main.o ${OBJECTDIR}/setup.o ${OBJECTDIR}/interrupt.o ${OBJECTDIR}/function.o ${OBJECTDIR}/peripheral.o ${OBJECTDIR}/table.o
 
 # Source Files
-SOURCEFILES=main.c setup.c interrupt.c function.c peripheral.c
+SOURCEFILES=main.c setup.c interrupt.c function.c peripheral.c table.c
 
 
 
@@ -119,6 +119,12 @@ ${OBJECTDIR}/peripheral.o: peripheral.c  .generated_files/flags/default/4244b1bb
 	@${RM} ${OBJECTDIR}/peripheral.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  peripheral.c  -o ${OBJECTDIR}/peripheral.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/peripheral.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
+${OBJECTDIR}/table.o: table.c  .generated_files/flags/default/93cad631f1a34c1c200384968d547cac87f7f806 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/table.o.d 
+	@${RM} ${OBJECTDIR}/table.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  table.c  -o ${OBJECTDIR}/table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/table.o.d"      -g -D__DEBUG   -mno-eds-warn  -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
 else
 ${OBJECTDIR}/main.o: main.c  .generated_files/flags/default/34c078882cdb2e768bcea567bb0b2a3533f9d980 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}" 
@@ -149,6 +155,12 @@ ${OBJECTDIR}/peripheral.o: peripheral.c  .generated_files/flags/default/1b3d27af
 	@${RM} ${OBJECTDIR}/peripheral.o.d 
 	@${RM} ${OBJECTDIR}/peripheral.o 
 	${MP_CC} $(MP_EXTRA_CC_PRE)  peripheral.c  -o ${OBJECTDIR}/peripheral.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/peripheral.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
+	
+${OBJECTDIR}/table.o: table.c  .generated_files/flags/default/11eb4fbb550790c6397fdbe9d4a529eb7ec97d58 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/table.o.d 
+	@${RM} ${OBJECTDIR}/table.o 
+	${MP_CC} $(MP_EXTRA_CC_PRE)  table.c  -o ${OBJECTDIR}/table.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MP -MMD -MF "${OBJECTDIR}/table.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ_default=$(CND_CONF)    $(COMPARISON_BUILD)  -O0 -msmart-io=1 -Wall -msfr-warn=off    -mdfp="${DFP_DIR}/xc16"
 	
 endif
 

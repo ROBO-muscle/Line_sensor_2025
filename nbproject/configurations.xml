@@ -27,6 +27,7 @@
       <itemPath>interrupt.c</itemPath>
       <itemPath>function.c</itemPath>
       <itemPath>peripheral.c</itemPath>
+      <itemPath>table.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
